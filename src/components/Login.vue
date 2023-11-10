@@ -20,7 +20,7 @@
     </div>
     <footer>
         <div class="footerText">
-            <h2>©2023</h2>
+            <h2>©2023 </h2>
             <a class="footerA" href="https://www.kvk.lt/">Klaipėdos valstybinė kolegija</a>
         </div>
         <img class='footerLogo' :src="kvkLogo" alt="footerLogo">

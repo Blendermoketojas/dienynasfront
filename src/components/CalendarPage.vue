@@ -39,7 +39,7 @@
       </v-dialog>
     </div>
   </div>
-  <button class="circular-button">+</button>
+  <button  @click="goToAddCalendarEvent" class="circular-button">+</button>
 </template>
 
 <script>
@@ -58,8 +58,8 @@ export default {
     user: null,
     showDialog: false,
     events: [  {
-              start: "2023-10-16 14:00",
-              end: "2023-10-16 18:00",
+              start: "2023-11-01 14:00",
+              end: "2023-11-05 18:00",
               title: "Praktika",
               content: "Praktikos aprašymas",
               contentFull: 'Praktika atliekama UAB "VLANTANA"',
@@ -72,11 +72,11 @@ export default {
           this.user = response.data;
           this.events = [
             {
-              start: "2023-10-16 14:00",
-              end: "2023-10-16 18:00",
+              start: "2023-11-01 14:00",
+              end: "2023-11-03 18:00",
               title: "Praktika",
               content: "Praktikos aprašymas",
-              contentFull: this.user.name,
+              contentFull: "",
               class: "",
             },
           ];
@@ -87,6 +87,9 @@ export default {
     },
   }),
   methods: {
+    goToAddCalendarEvent(){
+this.$router.push('/addevent');
+    },
     onEventClick(event, e) {
       this.selectedEvent = event;
       this.showDialog = !this.showDialog;
